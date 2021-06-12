@@ -20,6 +20,17 @@ export class HomeComponent implements OnInit {
         this.animeList = data.results
       }
     )
+
+    this.api.queryChanged.subscribe(
+      (query) => {
+        console.log(query)
+        this.api.getApi(query).subscribe(
+          (thisapi) => {
+            this.animeList = thisapi.results
+          }
+        )
+      } 
+    )
   }
 
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { api } from '../shared/api.service';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private apiService: api) { }
 
   ngOnInit(): void {
+  }
+
+  updateQuery(param){
+    this.apiService.queryChanged.emit(param)
   }
 
 }
