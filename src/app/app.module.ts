@@ -8,13 +8,15 @@ import { HomeComponent } from './home/home.component';
 import { api } from './shared/api.service';
 import { HeaderComponent } from './header/header.component';
 import { AnimeItemComponent } from './home/anime-item/anime-item.component';
+import { AnimeDetailComponent } from './home/anime-detail/anime-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     HeaderComponent,
-    AnimeItemComponent
+    AnimeItemComponent,
+    AnimeDetailComponent
   ],
   imports: [
     BrowserModule,
