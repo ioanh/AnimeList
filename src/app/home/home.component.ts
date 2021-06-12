@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { api } from '../shared/api.service';
+import { Anime } from '../shared/anime.model';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  animeList: Anime [] = [];
+
+  constructor(private api: api) { }
 
   ngOnInit(): void {
+    //Populating the anime list on init
+    this.api.getApi().subscribe(
+      (data) => {
+        this.animeList = data.results
+      }
+    )
   }
 
 }
