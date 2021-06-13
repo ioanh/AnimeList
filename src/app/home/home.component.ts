@@ -11,10 +11,6 @@ export class HomeComponent implements OnInit {
 
   animeList: Anime [] = [];
 
-  selectedAnime: Anime;
-  title: string = '';
-  
-
   constructor(private api: api) { }
 
   ngOnInit(): void {
@@ -36,13 +32,6 @@ export class HomeComponent implements OnInit {
       } 
     )
 
-    this.api.animeSelected.subscribe(
-      (animeData) => {
-        this.selectedAnime = animeData
-        this.title = this.selectedAnime.title
-        console.log(this.selectedAnime)
-      }
-    )
   }
 
 }
