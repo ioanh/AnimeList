@@ -1,8 +1,8 @@
-<div class="container">
-    <h1>{{animeTitle}}</h1>
-    <img src={{animeImageURL}}>
-    <p>Score: {{score}}</p>
-    <p>Episodes: {{episodes}}</p>
-    <p>Rated: {{rated}}</p>
-    <p>Members: {{members}}</p>
+<div class="container" *ngIf="dataReceived">
+    <h1>{{anime.title}}</h1>
+    <img src={{anime.image_url}}>
+    <p>Score: {{anime.score}}</p>
+    <p>Episodes: {{anime.episodes}}</p>
+    <p>Rated: {{anime.rated}}</p>
+    <p>Members: {{anime.members}}</p>
 </div>
