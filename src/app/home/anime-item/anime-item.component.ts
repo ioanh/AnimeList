@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Anime } from 'src/app/shared/anime.model';
+import { api } from 'src/app/shared/api.service';
 
 @Component({
   selector: 'app-anime-item',
@@ -8,11 +9,15 @@ import { Anime } from 'src/app/shared/anime.model';
 })
 export class AnimeItemComponent implements OnInit {
 
-  constructor() { }
+  constructor(private apiService: api) { }
 
   @Input('anime') anime: Anime;
 
   ngOnInit(): void {
+  }
+
+  animeSelected(){
+    this.apiService.animeSelected.emit(this.anime)
   }
 
 }
