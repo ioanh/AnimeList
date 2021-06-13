@@ -11,7 +11,7 @@ export class api {
 
     queryChanged = new EventEmitter<string>();
 
-    getApi(query: string = 'Death'): Observable <any>{
+    getApi(query: string = ''): Observable <any>{
         return this.httpClient.get(`https://api.jikan.moe/v3/search/anime?q=${query}&page=1`)
     }
 }
