@@ -3,9 +3,7 @@
     <img src={{anime.image_url}}>
     <p>Score: {{anime.score}}</p>
 </div> -->
-<div class="container">
-    <app-anime-detail></app-anime-detail>
-    <app-anime-item *ngFor="let anime of animeList" [anime]="anime"></app-anime-item>
-</div>
+<app-anime-item *ngFor="let anime of animeList" [anime]="anime"></app-anime-item>
+
 
 
