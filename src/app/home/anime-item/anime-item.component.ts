@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Anime } from 'src/app/shared/anime.model';
 import { api } from 'src/app/shared/api.service';
 
@@ -9,7 +10,7 @@ import { api } from 'src/app/shared/api.service';
 })
 export class AnimeItemComponent implements OnInit {
 
-  constructor(private apiService: api) { }
+  constructor(private apiService: api, private readonly router: Router) { }
 
   @Input('anime') anime: Anime;
 
