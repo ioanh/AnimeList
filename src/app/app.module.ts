@@ -11,6 +11,10 @@ import { HeaderComponent } from './header/header.component';
 import { AnimeItemComponent } from './home/anime-item/anime-item.component';
 import { AnimeDetailComponent } from './home/anime-item/anime-detail/anime-detail.component';
 
+const routes: Routes = [
+  {path: '', component: HomeComponent},
+  {path: 'detail', component: AnimeDetailComponent}
+]
 
 @NgModule({
   declarations: [
@@ -23,6 +27,7 @@ import { AnimeDetailComponent } from './home/anime-item/anime-detail/anime-detai
   imports: [
     BrowserModule,
     HttpClientModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [api],
   bootstrap: [AppComponent]
