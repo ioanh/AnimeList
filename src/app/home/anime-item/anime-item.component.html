@@ -1,11 +1,24 @@
 <div style="cursor: pointer;" class="col-sm-12" (click)="animeSelected()">
-    <div class="thumbnail">
+    <!-- <div class="thumbnail">
         <img src={{anime.image_url}} alt="...">
         <div class="caption">
           <h3>{{anime.title}}</h3>
           <p><span class="glyphicon glyphicon-star" aria-hidden="true"></span> {{anime.score}}</p>
         </div>
-      </div>
+    </div> -->
+
+    <!-- <div class="media-left">
+      <a href="#">
+        <img class="media-object" src={{anime.image_url}} alt="..." style="width: 124px; height: 124px;">
+      </a>
+    </div>
+    <div class="media-body">
+      <h4 class="media-heading">{{anime.title}}</h4>
+      <p><span class="glyphicon glyphicon-star" aria-hidden="true"></span> {{anime.score}}</p>
+    </div> -->
+    <li class="list-group-item">{{anime.title}} <span class="glyphicon glyphicon-star" aria-hidden="true"></span> {{anime.score}}</li>
 </div>
+
+
 
 
