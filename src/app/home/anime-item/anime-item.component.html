@@ -16,7 +16,16 @@
       <h4 class="media-heading">{{anime.title}}</h4>
       <p><span class="glyphicon glyphicon-star" aria-hidden="true"></span> {{anime.score}}</p>
     </div> -->
-    <li class="list-group-item">{{anime.title}} <span class="glyphicon glyphicon-star" aria-hidden="true"></span> {{anime.score}}</li>
+    <!-- <li class="list-group-item">{{anime.title}} <span class="glyphicon glyphicon-star" aria-hidden="true"></span> {{anime.score}}</li> -->
+    <div class="row" style="padding: 15px">
+      <div class="col-sm-2">
+        <img src={{anime.image_url}} style="max-width: 75px;">
+      </div>
+      <div class="col-sm-10">
+        <h3>{{anime.title}}</h3>
+        <p><span class="glyphicon glyphicon-star" aria-hidden="true"></span> {{anime.score}}</p>
+      </div>
+    </div>
 </div>
 
 
