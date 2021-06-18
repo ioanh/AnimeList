@@ -10,7 +10,7 @@ import { api } from 'src/app/shared/api.service';
 })
 export class AnimeItemComponent implements OnInit {
 
-  constructor(private apiService: api, private readonly router: Router) { }
+  constructor(private apiService: api, private router: Router) { }
 
   @Input('anime') anime: Anime;
 
@@ -19,6 +19,7 @@ export class AnimeItemComponent implements OnInit {
 
   animeSelected(){
     this.apiService.animeSelected.emit(this.anime)
+    this.router.navigate([`/detail/${this.anime.title}/${this.anime.score}`])
   }
 
 }
