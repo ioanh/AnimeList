@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { api } from '../shared/api.service';
 import { Anime } from '../shared/anime.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -11,7 +12,7 @@ export class HomeComponent implements OnInit {
 
   animeList: Anime [] = [];
 
-  constructor(private api: api) { }
+  constructor(private api: api, private router: Router) { }
 
   ngOnInit(): void {
     //Populating the anime list on init
