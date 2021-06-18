@@ -10,10 +10,12 @@ import { api } from './shared/api.service';
 import { HeaderComponent } from './header/header.component';
 import { AnimeItemComponent } from './home/anime-item/anime-item.component';
 import { AnimeDetailComponent } from './home/anime-item/anime-detail/anime-detail.component';
+import { AnimeDisplayComponent } from './home/anime-item/anime-display/anime-display.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
-  {path: 'detail', component: AnimeDetailComponent}
+  {path: 'detail', component: AnimeDetailComponent},
+  {path: 'detail/:title/:score', component: AnimeDisplayComponent}
 ]
 
 @NgModule({
@@ -23,6 +25,7 @@ const routes: Routes = [
     HeaderComponent,
     AnimeItemComponent,
     AnimeDetailComponent,
+    AnimeDisplayComponent,
   ],
   imports: [
     BrowserModule,
