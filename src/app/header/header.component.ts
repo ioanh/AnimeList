@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { api } from '../shared/api.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { api } from '../shared/api.service';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private apiService: api) { }
+  constructor(private apiService: api, private router: Router) { }
 
   ngOnInit(): void {
   }
