@@ -19,7 +19,7 @@ export class AnimeItemComponent implements OnInit {
 
   animeSelected(){
     this.apiService.animeSelected.emit(this.anime)
-    this.router.navigate([`/detail/${this.anime.title}/${this.anime.score}`])
+    this.router.navigate([`/detail/${this.anime.title}/${this.anime.score}/${this.anime.url}/${this.anime.image_url}/${this.anime.episodes}/${this.anime.start_date}/${this.anime.end_date}`])
   }
 
 }
