@@ -8,14 +8,27 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class AnimeDisplayComponent implements OnInit {
 
-  anime: {title: string, score: number}
+  anime: {
+    title: string, 
+    score: number,
+    url: string,
+    imgURL:string,
+    episodes: number,
+    start: string,
+    end: string
+  }
 
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.anime = {
       title: this.route.snapshot.params['title'],
-      score: this.route.snapshot.params['score']
+      score: this.route.snapshot.params['score'],
+      url: this.route.snapshot.params['url'],
+      imgURL: this.route.snapshot.params['imgURL'],
+      episodes: this.route.snapshot.params['episodes'],
+      start: this.route.snapshot.params['start'],
+      end: this.route.snapshot.params['end'],
     }
   }
 
