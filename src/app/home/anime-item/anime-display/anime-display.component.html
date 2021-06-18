@@ -1,2 +1,14 @@
 <h1>{{anime.title}}</h1>
+<img src={{anime.imgURL}}>
 <h1>{{anime.score}}</h1>
+<a href={{anime.url}}>AnimeList</a>
+<p>episodes: {{anime.episodes}}</p>
+<p>start date: {{anime.start}}</p>
+<p>end date: {{anime.end}}</p>
+
+
+url: this.route.snapshot.params['url'],
+      imgURL: this.route.snapshot.params['imgURL'],
+      episodes: this.route.snapshot.params['episodes'],
+      start: this.route.snapshot.params['start'],
+      end: this.route.snapshot.params['end'],
