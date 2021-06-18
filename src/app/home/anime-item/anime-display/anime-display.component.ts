@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Anime } from 'src/app/shared/anime.model';
 
 @Component({
   selector: 'app-anime-display',
@@ -9,27 +10,14 @@ import { ActivatedRoute } from '@angular/router';
 export class AnimeDisplayComponent implements OnInit {
 
   anime: {
-    title: string, 
-    score: number,
-    url: string,
-    imgURL:string,
-    episodes: number,
-    start: string,
-    end: string
+    url: string
   }
 
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.anime = {
-      title: this.route.snapshot.params['title'],
-      score: this.route.snapshot.params['score'],
-      url: this.route.snapshot.params['url'],
-      imgURL: this.route.snapshot.params['imgURL'],
-      episodes: this.route.snapshot.params['episodes'],
-      start: this.route.snapshot.params['start'],
-      end: this.route.snapshot.params['end'],
-    }
+    this.anime = this.route.snapshot.params['anime']
+    console.log(this.anime)
   }
 
 }
