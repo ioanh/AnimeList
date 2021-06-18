@@ -3,13 +3,10 @@
     <img src={{anime.image_url}}>
     <p>Score: {{anime.score}}</p>
 </div> -->
-<div class="col-sm-6">
+<div class="col-sm-12">
     <ul class="list-group">
         <app-anime-item *ngFor="let anime of animeList" [anime]="anime"></app-anime-item>
     </ul>
-</div>
-<div class="col-sm-6">
-    <app-anime-detail></app-anime-detail>
 </div>
 
 
