@@ -9,15 +9,13 @@ import { Anime } from 'src/app/shared/anime.model';
 })
 export class AnimeDisplayComponent implements OnInit {
 
-  anime: {
-    url: string
-  }
+  animeURL: string;
 
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.anime = this.route.snapshot.params['anime']
-    console.log(this.anime)
+    this.animeURL = this.route.snapshot.params['anime']
+    console.log(this.animeURL)
   }
 
 }
