@@ -11,12 +11,16 @@ export class AnimeDisplayComponent implements OnInit {
 
   animeURL: string;
   imageURL: string;
+  title: string;
+  synopsis: string;
 
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.animeURL = decodeURIComponent(this.route.snapshot.params['animeURL']) 
     this.imageURL = decodeURIComponent(this.route.snapshot.params['imageURL']) 
+    this.title = decodeURIComponent(this.route.snapshot.params['title']) 
+    this.synopsis = decodeURIComponent(this.route.snapshot.params['synopsis']) 
     console.log(this.animeURL)
   }
 
