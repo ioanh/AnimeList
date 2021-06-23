@@ -19,7 +19,7 @@ export class AnimeItemComponent implements OnInit {
 
   animeSelected(){
     this.apiService.animeSelected.emit(this.anime)
-    this.router.navigate([`/detail/${encodeURIComponent(this.anime.url)}`])
+    this.router.navigate([`/detail/${encodeURIComponent(this.anime.url)}/${encodeURIComponent(this.anime.image_url)}`])
   }
 
 }
