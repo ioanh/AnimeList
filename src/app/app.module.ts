@@ -15,7 +15,7 @@ import { AnimeDisplayComponent } from './home/anime-item/anime-display/anime-dis
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'detail', component: AnimeDetailComponent},
-  {path: 'detail/:anime', component: AnimeDisplayComponent}
+  {path: 'detail/:animeURL', component: AnimeDisplayComponent}
 ]
 
 @NgModule({

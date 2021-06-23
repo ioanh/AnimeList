@@ -14,7 +14,7 @@ export class AnimeDisplayComponent implements OnInit {
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.animeURL = this.route.snapshot.params['anime']
+    this.animeURL = this.route.snapshot.params['animeURL']
     console.log(this.animeURL)
   }
 
